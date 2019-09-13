@@ -17,6 +17,16 @@ public class Main {
         User userNurse = new Nurse("Estebana","e@e.net");
         userNurse.showUserData();
 
+        User anonymousUser = new User("Anonimo","a@a.com") {
+            @Override
+            public void showUserData() {
+                System.out.println("Internship doctor");
+                System.out.println("Works at the La Paloma Hospital");
+                System.out.println("Department of Odontology");
+            }
+        };
+        anonymousUser.showUserData();
+
         /*
         Doctor myDoctor = new Doctor("Ana", "a@a.es");
 
