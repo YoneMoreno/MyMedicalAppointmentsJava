@@ -50,4 +50,9 @@ public class Patient extends User {
                                     "\nHeight: " + height +
                                     "\nBlood: " + blood;
     }
+
+    @Override
+    public void showUserData() {
+        System.out.println("Is a patient");
+    }
 }

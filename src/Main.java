@@ -1,4 +1,5 @@
 import model.Doctor;
+import model.Nurse;
 import model.Patient;
 import model.User;
 
@@ -7,6 +8,16 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
 
+        User userDoctor = new Doctor("Bob","bob@b.com");
+        userDoctor.showUserData();
+
+        User userPatient = new Patient("Pepe","p@p.es");
+        userPatient.showUserData();
+
+        User userNurse = new Nurse("Estebana","e@e.net");
+        userNurse.showUserData();
+
+        /*
         Doctor myDoctor = new Doctor("Ana", "a@a.es");
 
         myDoctor.addAvailableAppointment(new Date(), "4pm");
@@ -14,9 +25,6 @@ public class Main {
         myDoctor.addAvailableAppointment(new Date(), "8am");
 
         System.out.println(myDoctor);
-
-        User newUser = new Doctor("Bob","bob@b.com");
-        //System.out.println(newUser);
 
         Patient alejandra = new Patient("Alejandra", "a@a.com");
         alejandra.setWeight(66.5);
@@ -27,6 +35,7 @@ public class Main {
         alejandra.setBlood("A+");
 
         System.out.println(alejandra);
+        */
     }
 
 
