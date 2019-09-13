@@ -1,9 +1,21 @@
+import java.util.Date;
+
 import static ui.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
 
         Doctor myDoctor = new Doctor("Ana", "Oncology");
+
+        myDoctor.addAvailableAppointment(new Date(), "4pm");
+        myDoctor.addAvailableAppointment(new Date(), "8pm");
+        myDoctor.addAvailableAppointment(new Date(), "8am");
+
+        for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()) {
+            System.out.println(aA.getDate() + " " + aA.getTime());
+        }
+
+        /*
         myDoctor.showName();
         myDoctor.showSpeciality();
         myDoctor.showId();
@@ -17,6 +29,7 @@ public class Main {
         System.out.println(alejandra.getPhoneNumber());
 
         showMenu();
+        */
     }
 
 
