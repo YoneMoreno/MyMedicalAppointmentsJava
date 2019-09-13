@@ -1,6 +1,6 @@
 package model;
 
-public class User {
+public abstract class User {
     private String name;
     private String email;
     private String address;
@@ -49,7 +49,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "model.User: " + name + " Email: " + email +
+        return "User: " + name + " Email: " + email +
                 "\n" + "Address: " + address + " Phone: " + phoneNumber;
     }
 }

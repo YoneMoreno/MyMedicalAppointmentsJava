@@ -8,9 +8,8 @@ public class Doctor extends User {
     private String speciality;
 
 
-    public Doctor(String name, String email, String speciality){
+    public Doctor(String name, String email){
         super(name,email);
-        this.speciality = speciality;
     }
 
     public void showName(){
