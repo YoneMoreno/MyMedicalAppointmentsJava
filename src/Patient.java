@@ -40,4 +40,12 @@ public class Patient extends User {
     public void setHeight(double height) {
         this.height = height;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nBirthday: " + birthday +
+                                    "\nWeight: " + weight +
+                                    "\nHeight: " + height +
+                                    "\nBlood: " + blood;
+    }
 }

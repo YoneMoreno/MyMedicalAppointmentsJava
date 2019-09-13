@@ -15,18 +15,15 @@ public class Main {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
 
-        myDoctor.showName();
-        myDoctor.showSpeciality();
-
         Patient alejandra = new Patient("Alejandra", "a@a.com");
         alejandra.setWeight(66.5);
-        System.out.println(alejandra.getName() + " weight is: " + alejandra.getWeight());
-
         alejandra.setPhoneNumber("123456789");
         alejandra.setPhoneNumber("12345678");
-        System.out.println(alejandra.getPhoneNumber());
+        alejandra.setBirthday("19/01/1987");
+        alejandra.setHeight(1.85);
+        alejandra.setBlood("A+");
 
-        showMenu();
+        System.out.println(alejandra);
     }
 
 
