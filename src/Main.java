@@ -5,7 +5,7 @@ import static ui.UIMenu.*;
 public class Main {
     public static void main(String[] args) {
 
-        Doctor myDoctor = new Doctor("Ana", "Oncology");
+        Doctor myDoctor = new Doctor("Ana", "a@a.es", "Oncology");
 
         myDoctor.addAvailableAppointment(new Date(), "4pm");
         myDoctor.addAvailableAppointment(new Date(), "8pm");
@@ -15,10 +15,8 @@ public class Main {
             System.out.println(aA.getDate() + " " + aA.getTime());
         }
 
-        /*
         myDoctor.showName();
         myDoctor.showSpeciality();
-        myDoctor.showId();
 
         Patient alejandra = new Patient("Alejandra", "a@a.com");
         alejandra.setWeight(66.5);
@@ -29,7 +27,6 @@ public class Main {
         System.out.println(alejandra.getPhoneNumber());
 
         showMenu();
-        */
     }
 
 
