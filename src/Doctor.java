@@ -10,12 +10,20 @@ public class Doctor {
         id = nextValidId;
     }
 
-    Doctor(String name){
-        System.out.println("The assigned name for the Doctor is " + name);
+    Doctor(String name, String speciality){
+        System.out.println("Building Doctor object");
+        nextValidId++;
+        id = nextValidId;
+        this.name = name;
+        this.speciality = speciality;
     }
 
     public void showName(){
         System.out.println(name);
+    }
+
+    public void showSpeciality(){
+        System.out.println(speciality);
     }
 
     public void showId(){
