@@ -8,6 +8,9 @@ public class Main {
         myDoctor.showSpeciality();
         myDoctor.showId();
 
+        Patient alejandra = new Patient("Alejandra", "a@a.com");
+
+
         showMenu();
     }
 

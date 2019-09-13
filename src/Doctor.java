@@ -2,6 +2,7 @@ public class Doctor {
     static int nextValidId;
     int id;
     String name;
+    String email;
     String speciality;
 
     Doctor(){
