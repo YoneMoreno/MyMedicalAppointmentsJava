@@ -103,7 +103,7 @@ public class UIMenu {
                     if(email.equals(doctor.getEmail())){
                         emailCorrect = true;
                         doctorLogged = doctor;
-                        //showDoctorMenu
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             }
