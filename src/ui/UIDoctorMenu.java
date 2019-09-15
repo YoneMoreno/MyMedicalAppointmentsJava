@@ -1,6 +1,8 @@
 package ui;
 
+import model.AppointmentDoctor;
 import model.Doctor;
+import model.Patient;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -26,6 +28,7 @@ public class UIDoctorMenu {
                     showAddAvailableAppointmentMenu();
                     break;
                 case 2:
+                    showScheduledAppointments();
                     break;
                 case 0:
                     UIMenu.showMenu();
@@ -84,4 +87,21 @@ public class UIDoctorMenu {
         }
     }
 
+    private static void showScheduledAppointments(){
+        int numberOfAppointments = 0;
+        for (Patient patient : UIMenu.patients) {
+            for (AppointmentDoctor appointmentDoctor : patient.getAppointmentDoctors()) {
+                if(appointmentDoctor.getDoctor() == UIMenu.doctorLogged){
+                    numberOfAppointments++;
+                    System.out.println(numberOfAppointments + ". " +
+                            "Appointment with patient: " + patient.getName() +
+                            "\nDate: " + appointmentDoctor.getDate() +
+                            "Time: " + appointmentDoctor.getTime());
+                }
+            }
+        }
+        if(numberOfAppointments == 0){
+            System.out.println(UIMenu.doctorLogged.getName() + " you don't have appointments!");
+        }
+    }
 }
